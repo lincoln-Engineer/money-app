@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deposit Page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        
+        body {
+            background: #f0f0f5;
+            padding-bottom: 100px;
+            margin-bottom: 50px;
+        }
+        
+        header {
+            background: linear-gradient(to right, #1f40af, #3f63e9);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        .download-btn {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            background: red;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .container {
+            max-width: 800px;
+            line-height: ;
+            margin: 1rem auto;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 15px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .section-title {
+            font-size: 1.5rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .method-box {
+            background: #25d366;
+            color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            text-align: right;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        label,
+        input[type="number"] {
+            display: block;
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+        
+        .input-box {
+            background: #2d4fb1;
+            padding: 0.75rem;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .input-box span {
+            margin-right: 0.5rem;
+        }
+        
+        .input-box input {
+            border: none;
+            background: rgba(255, 255, 255, 0.1);
+            color: white;
+            font-size: 1rem;
+            width: 100%;
+            padding: 10px;
+        }
+        
+        .checkbox {
+            margin-bottom: 1rem;
+        }
+        
+        .proceed-btn {
+            background: #1f40af;
+            color: white;
+            width: 100%;
+            padding: 1rem;
+            border: none;
+            border-radius: 30px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 1.5rem;
+        }
+        
+        .notice {
+            background: #fff7e6;
+            border-left: 4px solid orange;
+            padding: 1rem;
+            border-radius: 10px;
+            margin-bottom: 1rem;
+        }
+        
+        .notice strong {
+            font-weight: bold;
+        }
+        
+        .faq {
+            background: #eef6ff;
+            padding: 1rem;
+            border-radius: 10px;
+            font-weight: bold;
+        }
+        
+        .marquee-content {
+            display: flex;
+            flex-direction: column;
+            animation: scrollUp 10s linear infinite;
+        }
+        
+        .marquee-content div {
+            padding: 1rem;
+            border-bottom: 1px solid #eee;
+        }
+        
+        @keyframes scrollUp {
+            0% {
+                transform: translateY(0);
+            }
+            100% {
+                transform: translateY(-100%);
+            }
+        }
+        
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: white;
+            display: flex;
+            justify-content: space-around;
+            border-top: 1px solid #ddd;
+            padding: 0.5rem 0;
+        }
+        
+        .bottom-nav div {
+            text-align: center;
+            font-size: 0.8rem;
+        }
+        
+        .bottom-nav i {
+            display: block;
+            font-size: 0.8rem;
+            color: #1f40af;
+        }
+        
+        .bottom-nav a {
+            text-decoration: none;
+            color: #1f40af;
+            font-size: 0.8rem;
+            text-align: center;
+        }
+        
+        .bottom-nav i {
+            display: block;
+            font-size: 1rem;
+            color: #1f40af;
+        }
+        
+        .whatsapp {
+            position: fixed;
+            bottom: 80px;
+            right: 20px;
+            background: #25d366;
+            color: white;
+            padding: 1rem;
+            border-radius: 50%;
+            font-size: 1.5rem;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>BRM</h2>
+
+    </header>
+    <div class="container">
+        <h2 class="section-title">Recharge</h2>
+
+        <div class="method-box">M-Pesa</div>
+
+        <label>Deposit Amount</label>
+        <div class="input-box">
+            <span>KES</span>
+            <input type="number" id="amount" value="1000" />
+        </div>
+
+        <div class="checkbox">
+            <input type="checkbox" id="mpesa" checked />
+            <label for="mpesa" ">MPESA</label>
+        </div>
+
+        <button class="proceed-btn " onclick="proceedRecharge() ">Proceed</button>
+
+        <div class="notice ">
+            <strong>Working Hours</strong><br /> Our support team is available from <strong>Monday to Friday, 9:00 AM - 6:00 PM (EAT)</strong>.<br /> Messages received outside working hours will be responded to on the next business day.
+        </div>
+
+        <div class="faq ">Frequently Asked Questions (FAQs)</div>
+    </div>
+
+     <div class="bottom-nav ">
+        <a href="homepage.html "><i class="fas fa-home "></i>Home</a>
+        <a href="deposit.html "><i class="fas fa-wallet "></i>Deposit</a>
+        <a href="levels.html "><i class="fas fa-layer-group "></i>Levels</a>
+        <a href="withdraw.html "><i class="fas fa-hand-holding-usd "></i>Withdraw</a>
+        <a href="dashboard.html "><i class="fas fa-user "></i>Profile</a>
+    </div>
+
+    <div class="whatsapp ">
+        <i class="fab fa-whatsapp "></i>
+    </div>
+
+    <script>
+        function proceedRecharge() {
+            const amount = document.getElementById('amount').value;
+            const isChecked = document.getElementById('mpesa').checked;
+            if (!isChecked || amount <= 0) {
+                alert("Please enter a valid amount and ensure MPESA is selected. ");
+            } else {
+                alert(`Proceeding with KES ${amount} via MPESA.`);
+            }
+        }
+    </script>
+</body>
+
+</html>

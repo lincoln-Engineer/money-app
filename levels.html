@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BRM</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        
+        body {
+            background: #f0f0f5;
+            padding-bottom: 100px;
+            margin-bottom: 50px;
+        }
+        
+        header {
+            background: linear-gradient(to right, #1f40af, #3f63e9);
+            color: white;
+            padding: 1rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        .download-btn {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            background: red;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        
+        .membership-section {
+            padding: 1rem;
+        }
+        
+        .membership-section h2 {
+            color: #0050d6;
+            margin-bottom: 1rem;
+        }
+        
+        .wallet-balance {
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+        
+        .level-card {
+            padding: 1rem;
+            border-radius: 10px;
+            color: white;
+            margin-bottom: 1rem;
+            position: relative;
+        }
+        
+        .level-card h3 {
+            font-size: 1.2rem;
+        }
+        
+        .level-card p {
+            margin: 0.5rem 0;
+        }
+        
+        .level-icon {
+            position: absolute;
+            right: 1rem;
+            top: 1rem;
+            width: 40px;
+            height: 40px;
+        }
+        
+        .top-up-btn {
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            border: none;
+            border-radius: 5px;
+            background: white;
+            color: #333;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .level1 {
+            background: #a32828;
+        }
+        
+        .level2 {
+            background: #4b1c1c;
+        }
+        
+        .level3 {
+            background: #1aa7ad;
+        }
+        
+        .bottom-nav {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: white;
+            display: flex;
+            justify-content: space-around;
+            border-top: 1px solid #ddd;
+            padding: 0.5rem 0;
+        }
+        
+        .bottom-nav div {
+            text-align: center;
+            font-size: 0.8rem;
+        }
+        
+        .bottom-nav i {
+            display: block;
+            font-size: 0.8rem;
+            color: #1f40af;
+        }
+        
+        .bottom-nav a {
+            text-decoration: none;
+            color: #1f40af;
+            font-size: 0.8rem;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h2>BRM</h2>
+
+    </header>
+    <div class="membership-section">
+        <h2>Membership Levels</h2>
+        <div class="wallet-balance">Wallet Balance: KES 0.00</div>
+
+        <div class="level-card level1">
+            <h3>Level 1</h3>
+            <p>Rebate Per Order: <strong>KES 16</strong></p>
+            <p>Daily Tasks: <strong>5</strong></p>
+            <p>Deposit Amount: <strong>KES 2,000.00</strong></p>
+            <img src="https://via.placeholder.com/40x40?text=1" alt="Level 1" class="level-icon">
+            <button class="top-up-btn">Top Up <i class="fas fa-wallet"></i></button>
+        </div>
+
+        <div class="level-card level2">
+            <h3>Level 2</h3>
+            <p>Rebate Per Order: <strong>KES 54</strong></p>
+            <p>Daily Tasks: <strong>5</strong></p>
+            <p>Deposit Amount: <strong>KES 8,000.00</strong></p>
+            <img src="https://via.placeholder.com/40x40?text=2" alt="Level 2" class="level-icon">
+            <button class="top-up-btn">Top Up <i class="fas fa-wallet"></i></button>
+        </div>
+
+        <div class="level-card level3">
+            <h3>Level 3</h3>
+            <p>Rebate Per Order: <strong>KES 100</strong></p>
+            <p>Daily Tasks: <strong>5</strong></p>
+            <p>Deposit Amount: <strong>KES 16,000.00</strong></p>
+            <i class="fa-solid fa-trophy"></i>
+            <button class="top-up-btn">Top Up <i class="fas fa-wallet"></i></button>
+        </div>
+    </div>
+
+    <div class="bottom-nav ">
+        <a href="homepage.html"><i class="fas fa-home "></i>Home</a>
+        <a href="deposit.html"><i class="fas fa-wallet "></i>Deposit</a>
+        <a href="levels.html"><i class="fas fa-layer-group "></i>Levels</a>
+        <a href="withdraw.html"><i class="fas fa-hand-holding-usd "></i>Withdraw</a>
+        <a href="dashboard.html"><i class="fas fa-user "></i>Profile</a>
+    </div>
+    <div class="whatsapp">
+        <i class="fab fa-whatsapp"></i>
+    </div>
+</body>
+
+</html>
